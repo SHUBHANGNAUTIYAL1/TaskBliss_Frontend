@@ -36,7 +36,7 @@ const NewTask: React.FC<NewTaskProps> = ({ setOpen }) => {
     console.log(formData)
     e.preventDefault();
     try{
-    const response = await axios.post("http://localhost:8100/api/todo/create-todo",formData);
+    const response = await axios.post("https://taskbliss-backend.onrender.com/api/todo/create-todo",formData);
     console.log(response)
     alert("Task Added successfully");
     window.location.reload();

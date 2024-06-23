@@ -27,7 +27,7 @@ const Task: React.FC = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get(`http://localhost:8100/api/todo/user/${user_id}`);
+        const response = await axios.get(`https://taskbliss-backend.onrender.com/api/todo/user/${user_id}`);
         let fetchedTasks = response.data;
 
         if (sortOption === 'date') {

@@ -26,7 +26,7 @@ const LoginForm: React.FC = () => {
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     try {
-        const res = await axios.post("http://localhost:8100/api/auth/login", loginData);
+        const res = await axios.post("https://taskbliss-backend.onrender.com/api/auth/login", loginData);
       localStorage.setItem('user',JSON.stringify(res.data))
       setSubmitted(true)
       navigate('/home')
